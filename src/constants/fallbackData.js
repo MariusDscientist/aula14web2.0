@@ -1,38 +1,38 @@
 export const FALLBACK_DATA = {
   hero: {
-    title: "Cultura que Transforma",
-    subtitle: "En la Fundación Aula 14, conectamos conocimiento con oportunidades reales para construir un futuro inclusivo.",
-    backgroundImage: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80"
+    title: "Arte y Cultura que Transforman el Territorio",
+    subtitle: "Impulsamos el desarrollo social, la identidad y la economía creativa desde Risaralda para el mundo.",
+    backgroundImage: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80"
   },
   nosotros: {
-    title: "Sobre Nosotros",
-    mission: "Nuestra misión es democratizar el acceso a la educación y la tecnología en comunidades vulnerables.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80",
+    title: "¿Quiénes Somos?",
+    mission: "Gestionamos la cultura de forma integral para fomentar la participación ciudadana, la inclusión social y el reconocimiento de nuestra memoria histórica.",
+    image: "https://images.unsplash.com/photo-1459749411177-042180ce673c?auto=format&fit=crop&q=80",
     content: [
-      { label: "Innovación Social", text: "Implementamos herramientas tecnológicas de vanguardia." },
-      { label: "Impacto Real", text: "Más de 5.000 estudiantes beneficiados en el último año." }
+      { label: "Identidad Territorial", text: "Promovemos procesos creativos que fortalecen el tejido social y la cultura comunitaria." },
+      { label: "Inclusión y Ética", text: "Trabajamos con un enfoque diferencial, garantizando el acceso a la cultura sin discriminación." }
     ]
   },
   servicios: [
-    { name: "Capacitación IT", description: "Cursos prácticos de desarrollo de software y habilidades digitales." },
-    { name: "Mentorías", description: "Acompañamiento personalizado para el crecimiento profesional." },
-    { name: "Inclusión Digital", description: "Acceso a dispositivos y conectividad en zonas remotas." }
+    { name: "Formación y Mediación Cultural", description: "Laboratorios de creación artística y programas de mediación para públicos diversos." },
+    { name: "Producción Musical y Luthería", description: "Composición, producción y el arte de fabricar y restaurar instrumentos musicales." },
+    { name: "Artes Escénicas y Visuales", description: "Teatro, narración oral, muralismo artístico y diseño de escenografías profesionales." }
   ],
   proyectos: [
     {
-      title: "Aula Digital 2024",
-      category: "Educación",
-      description: "Equipamiento de laboratorios informáticos en escuelas rurales de Colombia.",
-      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80"
+      title: "Muralismo y Territorio",
+      category: "Artes Visuales",
+      description: "Intervención de espacios públicos para narrar la historia y cultura de nuestras comunidades.",
+      image: "https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&q=80"
     },
     {
-      title: "Talento Joven",
-      category: "Empleabilidad",
-      description: "Programa de inserción laboral para desarrolladores junior de comunidades diversas.",
-      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80"
+      title: "Taller de Luthería",
+      category: "Patrimonio",
+      description: "Rescate de técnicas tradicionales para la fabricación y mantenimiento de instrumentos de cuerda.",
+      image: "https://images.unsplash.com/photo-1550985616-10810253b84d?auto=format&fit=crop&q=80"
     }
   ],
   aliados: [
-    { name: "Aliado 1" }, { name: "Aliado 2" }, { name: "Aliado 3" }, { name: "Aliado 4" }
+    { name: "La Papayerosky" }, { name: "Colectivo Puro Cuento" }, { name: "Comfamiliar" }, { name: "SENA" }
   ]
 };

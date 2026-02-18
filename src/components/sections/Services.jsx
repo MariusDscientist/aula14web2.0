@@ -7,8 +7,8 @@ const Services = ({ data }) => {
     <section id="servicios" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
-          title="Nuestros Servicios" 
-          subtitle="Ofrecemos soluciones integrales para potenciar el aprendizaje y la innovación social."
+          title="Áreas de Acción y Servicios" 
+          subtitle="Desarrollamos líneas de trabajo integrales para el fortalecimiento de la economía creativa y la identidad territorial."
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {data?.map((service, idx) => (

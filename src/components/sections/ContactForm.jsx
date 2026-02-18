@@ -20,15 +20,15 @@ const ContactForm = () => {
         <div className="bg-blue-600 rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
           <div className="lg:w-1/2 p-12 text-white flex flex-col justify-between bg-blue-700">
             <div>
-              <h2 className="text-4xl font-bold mb-6">¿Tienes un proyecto en mente?</h2>
+              <h2 className="text-4xl font-bold mb-6">¿Tienes una propuesta cultural?</h2>
               <p className="text-blue-100 text-lg mb-10 leading-relaxed">
-                Nuestro equipo está listo para ayudarte a hacerlo realidad. Contáctanos y busquemos la mejor solución juntos.
+                Estamos abiertos a nuevas alianzas, proyectos artísticos y colaboraciones que fortalezcan nuestra comunidad.
               </p>
               
               <div className="space-y-8">
                 <div className="flex items-center gap-5">
                   <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shadow-inner"><Mail size={24}/></div>
-                  <span className="text-lg font-medium">info@fundacionaula14.org</span>
+                  <span className="text-lg font-medium">contacto@fundacionaula14.org</span>
                 </div>
                 <div className="flex items-center gap-5">
                   <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shadow-inner"><Phone size={24}/></div>
@@ -36,7 +36,7 @@ const ContactForm = () => {
                 </div>
                 <div className="flex items-center gap-5">
                   <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shadow-inner"><MapPin size={24}/></div>
-                  <span className="text-lg font-medium">Bogotá, Colombia</span>
+                  <span className="text-lg font-medium">Carrera 1b #17-24, Risaralda, Colombia</span>
                 </div>
               </div>
             </div>

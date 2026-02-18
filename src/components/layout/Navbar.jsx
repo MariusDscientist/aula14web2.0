@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X, Heart, Users } from 'lucide-react';
 
 const Navbar = ({ sections, activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,7 +63,7 @@ const Navbar = ({ sections, activeSection }) => {
                 onClick={() => scrollTo('donaciones')}
                 className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-blue-600/20"
               >
-                Donar
+                Sembrar
               </button>
             </div>
           </div>
@@ -97,7 +97,7 @@ const Navbar = ({ sections, activeSection }) => {
               onClick={() => scrollTo('donaciones')}
               className="w-full mt-4 bg-blue-600 text-white px-4 py-4 rounded-xl font-bold flex items-center justify-center gap-2"
             >
-              <Heart size={20}/> Donar Ahora
+              <Users size={20}/> Sembrar
             </button>
           </div>
         </div>

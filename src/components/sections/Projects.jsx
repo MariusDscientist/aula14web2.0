@@ -7,8 +7,8 @@ const Projects = ({ data }) => {
     <section id="proyectos" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
-          title="Proyectos e Impacto" 
-          subtitle="Transformando realidades a través de la educación y la tecnología."
+          title="Gestión y Procesos Creativos" 
+          subtitle="Transformamos el territorio a través de proyectos artísticos, culturales y de memoria histórica."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {data?.map((project, idx) => (

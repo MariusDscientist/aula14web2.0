@@ -12,7 +12,7 @@ const Footer = ({ sections }) => {
                <span className="text-2xl font-bold">Fundación Aula 14</span>
              </div>
              <p className="text-gray-400 max-w-xs">
-               Comprometidos con el desarrollo social a través de la educación y el empoderamiento tecnológico.
+               Transformando el tejido social a través del arte, la cultura y la gestión del patrimonio en el territorio.
              </p>
           </div>
           <div className="text-left">
