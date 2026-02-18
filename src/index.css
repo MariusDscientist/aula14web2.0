@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui;
+  --font-serif: "Fraunces", serif;
+
+  /* Redefinimos los colores para que se apliquen a todo el proyecto automáticamente */
+  --color-blue-50: #fdf8f6;
+  --color-blue-100: #faede9;
+  --color-blue-500: #d97706; /* Amber/Terracotta suave */
+  --color-blue-600: #b45309; /* Terracotta principal */
+  --color-blue-700: #92400e;
+  --color-blue-900: #134e4a; /* Verde Petróleo profundo para contraste cultural */
+  
+  --color-gray-900: #1a1a1a;
+  --color-white: #fdfbf7; /* Crema/Hueso para el fondo */
+}
+
+@layer base {
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
