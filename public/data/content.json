@@ -2,12 +2,12 @@
   "siteInfo": {
     "name": "Fundación Aula 14",
     "shortName": "14",
-    "slogan": "La cultura y las artes, se viven.",
+    "slogan": "La cultura y las artes, viven.",
     "email": "contacto@aula14.org"
   },
   "narrativa": {
     "declaracion": {
-      "frase": "La cultura y las artes, se viven.",
+      "frase": "La cultura y las artes, viven.",
       "subtexto": "Una experiencia cultural viva desde el corazón de Risaralda.",
       "imagenHero": "src/pictures/hero.jpg"
     },

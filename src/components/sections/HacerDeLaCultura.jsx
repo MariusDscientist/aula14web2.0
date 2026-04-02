@@ -7,8 +7,8 @@ const HacerDeLaCultura = ({ data }) => {
         
         <div className="max-w-xl space-y-4 mb-20">
           <div className="w-12 h-[2px] bg-brand-accent"></div>
-          <h2 className="text-5xl md:text-7xl font-serif text-brand-midnight leading-tight">
-            Nuestros haceres
+          <h2 className="text-5xl md:text-6xl font-serif text-brand-midnight leading-tight">
+            Haceres
           </h2>
           <p className="text-brand-muted italic">Traducimos la gestión en cultura viva.</p>
         </div>
