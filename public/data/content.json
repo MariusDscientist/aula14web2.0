@@ -2,27 +2,31 @@
   "siteInfo": {
     "name": "Fundación Aula 14",
     "shortName": "14",
-    "slogan": "La cultura y las artes, vive.",
+    "slogan": "La cultura y las artes, viven.",
     "email": "contacto@aula14.org"
   },
   "narrativa": {
     "declaracion": {
-      "frase": "La cultura y las artes, vive.",
+      "frase": "La cultura y las artes, viven.",
       "subtexto": "Una experiencia cultural viva desde el corazón de Risaralda.",
-      "imagenHero": "src/pictures/hero.jpg"
+      "imagenHero": "https://res.cloudinary.com/du94iybqm/image/upload/v1775166894/hero_ieuvx9.jpg"
     },
     "bloqueHumano": {
       "poetica": "Somos quienes cuentan, construyen, tocan y resisten.",
       "tarjetas": [
         {
           "id": 1,
-          "imagenes": ["src/pictures/cuento.jpeg", "src/pictures/puro.jpeg", "src/pictures/torneo.JPG"],
+          "imagenes": ["https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166889/purocuento_kv7qk4.jpg", 
+                      "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/Papayera_xhxmjb.jpg", 
+                      "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/torneo_fcdfko.jpg"],
           "textoPosterior": "Nuestra esencia es el tejido humano que habita cada proceso creativo.",
           "delay": 0
         },
         {
           "id": 2,
-          "imagenes": ["src/pictures/payeraFIesta.JPG", "src/pictures/Papayera.JPG", "src/pictures/purocuento.JPG"],
+          "imagenes": ["https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/payeraFIesta_lzu0yq.jpg", 
+                       "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/puro_vf0aih.jpg",
+                       "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166894/hero_ieuvx9.jpg"],
           "textoPosterior": "Construimos desde la memoria para transformar el presente del territorio.",
           "delay": 2500
         }
@@ -34,14 +38,14 @@
         "nombre": "Puro Cuento",
         "tagline": "Narrar es resistir",
         "descripcion": "Colectivo de narración oral que habita la palabra y la memoria.",
-        "imagen": "src/pictures/purocuento.JPG"
+        "imagen": "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/torneo_fcdfko.jpg"
       },
       {
         "id": "la-papayerosky",
         "nombre": "La Papayerosky",
         "tagline": "Sonido que transforma",
         "descripcion": "Grupo de música multifolclórica que rescata y evoluciona el ritmo territorial.",
-        "imagen": "src/pictures/Papayera.JPG"
+        "imagen": "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/Papayera_xhxmjb.jpg"
       }
     ],
     "hacer": [
@@ -51,8 +55,9 @@
         "original": "Formación",
         "descripcionCorta": "Laboratorios de creación artística y mediación cultural.",
         "descripcionLarga": "Diseñamos espacios de aprendizaje donde la teoría se funde con la práctica.",
-        "galeria": ["src/pictures/cuento.jpeg", "src/pictures/torneo.JPG"],
-        "links": { "contacto": "https://wa.me/571234567890", "comunidad": "https://chat.whatsapp.com/invitacion" }
+        "galeria": ["https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/Papayera_xhxmjb.jpg", 
+                    "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166889/purocuento_kv7qk4.jpg"],
+        "links": { "contacto": "https://wa.me/573206039545", "comunidad": "https://chat.whatsapp.com/invitacion" }
       },
       {
         "id": "lutheria",
@@ -60,8 +65,9 @@
         "original": "Luthería",
         "descripcionCorta": "El arte de fabricar y restaurar la voz de los instrumentos.",
         "descripcionLarga": "Rescatamos técnicas ancestrales para la construcción y reparación de instrumentos de cuerda.",
-        "galeria": ["src/pictures/puro.jpeg", "src/pictures/Papayera.JPG"],
-        "links": { "contacto": "https://wa.me/571234567890", "comunidad": null }
+        "galeria": ["https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/torneo_fcdfko.jpg", 
+                    "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/Papayera_xhxmjb.jpg"],
+        "links": { "contacto": "https://wa.me/573206039545", "comunidad": null }
       }
     ],
     "filosofia": [
@@ -72,7 +78,7 @@
     "donaciones": {
       "titulo": "Sembrar es hacer posible",
       "llamado": "Si esto te mueve, puedes hacerlo posible.",
-      "imagenFondo": "src/pictures/torneo.JPG",
+      "imagenFondo": "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/puro_vf0aih.jpg",
       "niveles": [
         {
           "id": "semilla",
