@@ -1,41 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  /* Fuentes Refinadas para Editorial */
+  /* Fuentes Refinadas */
   --font-sans: "Inter", "Geist", system-ui, sans-serif;
   --font-serif: "Fraunces", "Playfair Display", serif;
 
-  /* Paleta "Territorio y Memoria" - Swiss Gallery Aesthetic */
-  --color-brand-paper: #FDFBF7;        /* Off-white cálido */
-  --color-brand-midnight: #0F172A;     /* Azul petróleo profundo */
-  --color-brand-accent: #C2410C;       /* Terracota/Cobre luthería */
-  --color-brand-muted: #64748B;        /* Gris suave editorial */
+  /* Paleta "Territorio y Memoria" */
+  --color-brand-paper: #FDFBF7;
+  --color-brand-midnight: #0F172A;
+  --color-brand-accent: #C2410C;
+  --color-brand-muted: #64748B;
   
-  /* Sobreescribimos colores por defecto de Tailwind para consistencia legacy */
   --color-blue-600: var(--color-brand-accent);
   --color-blue-900: var(--color-brand-midnight);
   --color-white: var(--color-brand-paper);
 
-  /* Tokens de Animación */
+  /* Animaciones */
   --animate-reveal: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  --animate-parallax: parallax 10s linear infinite;
-
+  
   @keyframes reveal {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes parallax {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
   }
 }
 
 @layer base {
   body {
     @apply bg-brand-paper text-brand-midnight antialiased selection:bg-brand-accent selection:text-brand-paper;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   h1, h2, h3 {
@@ -44,17 +35,28 @@
 }
 
 @layer utilities {
-  .text-editorial-caption {
-    @apply text-xs font-mono uppercase tracking-[0.2em] text-brand-muted;
+  .text-metadata {
+    @apply text-[10px] uppercase tracking-[0.3em] font-mono font-bold text-brand-muted;
   }
   
   .border-editorial {
     @apply border border-brand-midnight/10;
   }
 
-  .grid-asymmetric {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
+  /* UTILIDADES PARA FLIP CARDS */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
   }
 }

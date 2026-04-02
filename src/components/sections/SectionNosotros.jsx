@@ -7,7 +7,7 @@ const SectionNosotros = ({ data }) => {
 
   return (
     <section id="nosotros" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative group">
             <div className="absolute -inset-4 bg-blue-100 rounded-3xl transform -rotate-3 transition-transform group-hover:rotate-0"></div>

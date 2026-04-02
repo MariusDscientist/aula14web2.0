@@ -2,20 +2,30 @@
   "siteInfo": {
     "name": "Fundación Aula 14",
     "shortName": "14",
-    "slogan": "La cultura y las artes, viven.",
+    "slogan": "La cultura y las artes, vive.",
     "email": "contacto@aula14.org"
   },
   "narrativa": {
     "declaracion": {
-      "frase": "La cultura y las artes, viven.",
+      "frase": "La cultura y las artes, vive.",
       "subtexto": "Una experiencia cultural viva desde el corazón de Risaralda.",
       "imagenHero": "src/pictures/hero.jpg"
     },
     "bloqueHumano": {
       "poetica": "Somos quienes cuentan, construyen, tocan y resisten.",
-      "rostros": [
-        { "id": 1, "imagen": "src/pictures/Papayera.JPG" },
-        { "id": 2, "imagen": "src/pictures/purocuento.JPG" }
+      "tarjetas": [
+        {
+          "id": 1,
+          "imagenes": ["src/pictures/cuento.jpeg", "src/pictures/puro.jpeg", "src/pictures/torneo.JPG"],
+          "textoPosterior": "Nuestra esencia es el tejido humano que habita cada proceso creativo.",
+          "delay": 0
+        },
+        {
+          "id": 2,
+          "imagenes": ["src/pictures/payeraFIesta.JPG", "src/pictures/Papayera.JPG", "src/pictures/purocuento.JPG"],
+          "textoPosterior": "Construimos desde la memoria para transformar el presente del territorio.",
+          "delay": 2500
+        }
       ]
     },
     "ecosistema": [
@@ -24,36 +34,34 @@
         "nombre": "Puro Cuento",
         "tagline": "Narrar es resistir",
         "descripcion": "Colectivo de narración oral que habita la palabra y la memoria.",
-        "imagen": "src/pictures/torneo.JPG"
+        "imagen": "src/pictures/purocuento.JPG"
       },
       {
         "id": "la-papayerosky",
         "nombre": "La Papayerosky",
         "tagline": "Sonido que transforma",
         "descripcion": "Grupo de música multifolclórica que rescata y evoluciona el ritmo territorial.",
-        "imagen": "src/pictures/payeraFIesta.JPG"
+        "imagen": "src/pictures/Papayera.JPG"
       }
     ],
     "hacer": [
       {
+        "id": "formacion",
         "area": "Aprender haciendo",
         "original": "Formación",
-        "descripcion": "Laboratorios de creación artística y mediación cultural."
+        "descripcionCorta": "Laboratorios de creación artística y mediación cultural.",
+        "descripcionLarga": "Diseñamos espacios de aprendizaje donde la teoría se funde con la práctica.",
+        "galeria": ["src/pictures/cuento.jpeg", "src/pictures/torneo.JPG"],
+        "links": { "contacto": "https://wa.me/571234567890", "comunidad": "https://chat.whatsapp.com/invitacion" }
       },
       {
+        "id": "lutheria",
         "area": "Construir sonido",
         "original": "Luthería",
-        "descripcion": "El arte de fabricar y restaurar la voz de los instrumentos."
-      },
-      {
-        "area": "Habitar el escenario",
-        "original": "Artes escénicas",
-        "descripcion": "Teatro, narración y presencia viva en el territorio."
-      },
-      {
-        "area": "Hacer que pase",
-        "original": "Gestión",
-        "descripcion": "Fortalecimiento de la economía creativa y la propiedad intelectual."
+        "descripcionCorta": "El arte de fabricar y restaurar la voz de los instrumentos.",
+        "descripcionLarga": "Rescatamos técnicas ancestrales para la construcción y reparación de instrumentos de cuerda.",
+        "galeria": ["src/pictures/puro.jpeg", "src/pictures/Papayera.JPG"],
+        "links": { "contacto": "https://wa.me/571234567890", "comunidad": null }
       }
     ],
     "filosofia": [
@@ -62,8 +70,29 @@
       { "titulo": "Innovación", "texto": "Creamos nuevas formas de sentir lo nuestro." }
     ],
     "donaciones": {
+      "titulo": "Sembrar es hacer posible",
       "llamado": "Si esto te mueve, puedes hacerlo posible.",
-      "boton": "Sembrar"
+      "imagenFondo": "src/pictures/torneo.JPG",
+      "niveles": [
+        {
+          "id": "semilla",
+          "nombre": "Semilla",
+          "impacto": "Financia materiales para un taller de luthería juvenil.",
+          "monto": "$50.000"
+        },
+        {
+          "id": "brote",
+          "nombre": "Brote",
+          "impacto": "Apoya la circulación de un grupo artístico local.",
+          "monto": "$150.000"
+        },
+        {
+          "id": "raiz",
+          "nombre": "Raíz",
+          "impacto": "Sostiene un proceso de investigación de memoria histórica.",
+          "monto": "$500.000"
+        }
+      ]
     }
   },
   "aliados": [

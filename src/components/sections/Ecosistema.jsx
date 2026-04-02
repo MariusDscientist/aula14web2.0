@@ -31,7 +31,7 @@ const Ecosistema = ({ data }) => {
         <div className="space-y-4">
           <div className="w-12 h-[2px] bg-brand-accent"></div>
           <h2 className="text-5xl md:text-8xl font-serif leading-none">Ecosistema Vivo</h2>
-          <span className="text-editorial-caption block text-brand-paper/40 tracking-[0.4em]">Navega la narrativa</span>
+          <span className="text-editorial-caption block text-brand-paper/40 tracking-[0.4em]">Navega nuestros proyectos</span>
         </div>
 
         {/* Controles del Carrusel */}
