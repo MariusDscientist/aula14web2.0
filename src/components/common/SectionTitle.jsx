@@ -1,11 +1,24 @@
 import React from 'react';
 
-const SectionTitle = ({ title, subtitle }) => (
-  <div className="mb-12 text-center">
-    <h2 className="text-3xl md:text-5xl font-serif font-bold text-blue-900 mb-4">{title}</h2>
-    <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full mb-6"></div>
-    {subtitle && <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>}
-  </div>
-);
+const SectionTitle = ({ title, subtitle, centered = false }) => {
+  return (
+    <div className={`space-y-4 ${centered ? 'text-center mx-auto' : 'text-left'} max-w-2xl`}>
+      <div className={`flex items-center gap-3 ${centered ? 'justify-center' : 'justify-start'}`}>
+        <div className="w-8 h-[2px] bg-brand-accent"></div>
+        <span className="text-editorial-caption">Bitácora Fundación</span>
+      </div>
+      
+      <h2 className="text-4xl md:text-5xl lg:text-6xl text-brand-midnight leading-tight">
+        {title}
+      </h2>
+      
+      {subtitle && (
+        <p className="text-brand-muted text-lg font-light leading-relaxed">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  );
+};
 
 export default SectionTitle;

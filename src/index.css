@@ -1,23 +1,60 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui;
-  --font-serif: "Fraunces", serif;
+  /* Fuentes Refinadas para Editorial */
+  --font-sans: "Inter", "Geist", system-ui, sans-serif;
+  --font-serif: "Fraunces", "Playfair Display", serif;
 
-  /* Redefinimos los colores para que se apliquen a todo el proyecto automáticamente */
-  --color-blue-50: #fdf8f6;
-  --color-blue-100: #faede9;
-  --color-blue-500: #d97706; /* Amber/Terracotta suave */
-  --color-blue-600: #b45309; /* Terracotta principal */
-  --color-blue-700: #92400e;
-  --color-blue-900: #134e4a; /* Verde Petróleo profundo para contraste cultural */
+  /* Paleta "Territorio y Memoria" - Swiss Gallery Aesthetic */
+  --color-brand-paper: #FDFBF7;        /* Off-white cálido */
+  --color-brand-midnight: #0F172A;     /* Azul petróleo profundo */
+  --color-brand-accent: #C2410C;       /* Terracota/Cobre luthería */
+  --color-brand-muted: #64748B;        /* Gris suave editorial */
   
-  --color-gray-900: #1a1a1a;
-  --color-white: #fdfbf7; /* Crema/Hueso para el fondo */
+  /* Sobreescribimos colores por defecto de Tailwind para consistencia legacy */
+  --color-blue-600: var(--color-brand-accent);
+  --color-blue-900: var(--color-brand-midnight);
+  --color-white: var(--color-brand-paper);
+
+  /* Tokens de Animación */
+  --animate-reveal: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-parallax: parallax 10s linear infinite;
+
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes parallax {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
 }
 
 @layer base {
-  h1, h2, h3, .font-serif {
-    font-family: var(--font-serif);
+  body {
+    @apply bg-brand-paper text-brand-midnight antialiased selection:bg-brand-accent selection:text-brand-paper;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3 {
+    @apply font-serif font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-editorial-caption {
+    @apply text-xs font-mono uppercase tracking-[0.2em] text-brand-muted;
+  }
+  
+  .border-editorial {
+    @apply border border-brand-midnight/10;
+  }
+
+  .grid-asymmetric {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
   }
 }

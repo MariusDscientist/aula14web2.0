@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Heart, Users } from 'lucide-react';
+import { Menu, X, Heart } from 'lucide-react';
 
-const Navbar = ({ sections, activeSection }) => {
+const Navbar = ({ sections, activeSection, siteInfo }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -27,33 +27,33 @@ const Navbar = ({ sections, activeSection }) => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ${
+      isScrolled ? 'bg-brand-paper shadow-sm py-4' : 'bg-transparent py-8'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-12">
         <div className="flex justify-between items-center">
-          <div className="flex-shrink-0 flex items-center gap-4 cursor-pointer group" onClick={() => scrollTo('hero')}>
-            <div className="relative w-10 h-10">
-              <div className="absolute inset-0 bg-blue-600/20 rounded-lg transform rotate-3 group-hover:rotate-12 transition-transform duration-300"></div>
-              <div className="absolute inset-0 bg-blue-600 border border-white/20 rounded-lg transform -rotate-3 group-hover:-rotate-12 transition-transform duration-300 flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">14</span>
-              </div>
+          
+          {/* Logo Minimalista */}
+          <div 
+            className="flex-shrink-0 flex items-center gap-4 cursor-pointer group" 
+            onClick={() => scrollTo('hero')}
+          >
+            <div className={`text-2xl font-serif font-black transition-colors ${isScrolled ? 'text-brand-midnight' : 'text-brand-paper'}`}>
+              {siteInfo?.name || 'Fundación Aula 14'}
             </div>
-            <span className={`font-bold text-xl transition-colors ${isScrolled ? 'text-gray-900' : 'text-gray-900 md:text-white'}`}>
-              Fundación Aula 14
-            </span>
           </div>
 
+          {/* Menú Desktop - Minimalista */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="flex items-center space-x-12">
               {sections.map((section) => (
                 <button
                   key={section.id}
                   onClick={() => scrollTo(section.id)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`text-[10px] uppercase tracking-[0.3em] font-bold transition-all hover:text-brand-accent ${
                     activeSection === section.id
-                      ? 'text-blue-600'
-                      : isScrolled ? 'text-gray-600 hover:text-blue-600' : 'text-gray-200 hover:text-white'
+                      ? 'text-brand-accent'
+                      : isScrolled ? 'text-brand-midnight' : 'text-brand-paper/60 hover:text-brand-paper'
                   }`}
                 >
                   {section.label}
@@ -61,45 +61,45 @@ const Navbar = ({ sections, activeSection }) => {
               ))}
               <button 
                 onClick={() => scrollTo('donaciones')}
-                className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-blue-600/20"
-              >
-                Sembrar
+                className="text-[13px] uppercase tracking-[0.3em] font-bold bg-brand-accent text-brand-paper px-6 py-3 hover:bg-brand-midnight transition-all"
+              >Donar
               </button>
             </div>
           </div>
 
+          {/* Mobile Toggle */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`inline-flex items-center justify-center p-2 rounded-md transition-colors ${
-                isScrolled || isMenuOpen ? 'text-gray-600' : 'text-gray-900'
+              className={`p-2 transition-colors ${
+                isScrolled || isMenuOpen ? 'text-brand-midnight' : 'text-brand-paper'
               }`}
             >
-              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
 
+      {/* Menú Mobile - Editorial Fullscreen */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-b border-gray-100 shadow-xl overflow-y-auto max-h-screen">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {sections.map((section) => (
+        <div className="fixed inset-0 bg-brand-paper z-[60] flex flex-col items-center justify-center space-y-8 animate-reveal">
+           <button onClick={() => setIsMenuOpen(false)} className="absolute top-8 right-8 text-brand-midnight"><X size={32}/></button>
+           {sections.map((section) => (
               <button
                 key={section.id}
                 onClick={() => scrollTo(section.id)}
-                className="block w-full text-left px-4 py-4 text-base font-semibold text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                className="text-4xl md:text-6xl font-serif font-black text-brand-midnight hover:text-brand-accent transition-colors"
               >
                 {section.label}
               </button>
             ))}
             <button 
-              onClick={() => scrollTo('donaciones')}
-              className="w-full mt-4 bg-blue-600 text-white px-4 py-4 rounded-xl font-bold flex items-center justify-center gap-2"
+                onClick={() => scrollTo('donaciones')}
+                className="mt-8 text-2xl font-serif font-black bg-brand-accent text-brand-paper px-12 py-6"
             >
-              <Users size={20}/> Sembrar
+                Donar
             </button>
-          </div>
         </div>
       )}
     </nav>

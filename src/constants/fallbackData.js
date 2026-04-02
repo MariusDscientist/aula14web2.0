@@ -1,8 +1,17 @@
 export const FALLBACK_DATA = {
+  siteInfo: {
+    name: "Fundación Aula 14",
+    shortName: "14",
+    slogan: "Transformando el tejido social a través del arte, la cultura y la gestión del patrimonio en el territorio.",
+    email: "contacto@aula14.org",
+    newsletterText: "Suscríbete para recibir noticias de impacto."
+  },
   hero: {
     title: "Arte y Cultura que Transforman el Territorio",
     subtitle: "Impulsamos el desarrollo social, la identidad y la economía creativa desde Risaralda para el mundo.",
-    backgroundImage: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80"
+    backgroundImage: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80",
+    ctaPrimary: "Conoce más",
+    ctaSecondary: "Proyectos Actuales"
   },
   nosotros: {
     title: "¿Quiénes Somos?",

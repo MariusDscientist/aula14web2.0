@@ -1,75 +1,68 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React from 'react';
 import { useContent } from './hooks/useContent';
+import { useScrollSpy } from './hooks/useScrollSpy';
+import { NAV_SECTIONS, SCROLL_OBSERVE_SECTIONS } from './constants/navigation';
 
-// Layout
+// Layout (Minimal)
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 
-// Sections
-import Hero from './components/sections/Hero';
-import SectionNosotros from './components/sections/SectionNosotros';
-import Services from './components/sections/Services';
-import Projects from './components/sections/Projects';
-import Allies from './components/sections/Allies';
-import Donations from './components/sections/Donations';
+// Narrative Sections (Reconstrucción)
+import Declaracion from './components/sections/Declaracion';
+import BloqueHumano from './components/sections/BloqueHumano';
+import Ecosistema from './components/sections/Ecosistema';
+import HacerDeLaCultura from './components/sections/HacerDeLaCultura';
+import Filosofia from './components/sections/Filosofia';
+import DonacionesNarrativa from './components/sections/DonacionesNarrativa';
 import ContactForm from './components/sections/ContactForm';
+import Allies from './components/sections/Allies';
 
 export default function App() {
   const { data, loading } = useContent();
-  const [activeSection, setActiveSection] = useState('hero');
+  const activeSection = useScrollSpy(SCROLL_OBSERVE_SECTIONS);
 
-  const navSections = useMemo(() => [
-    { id: 'nosotros', label: 'Nosotros' },
-    { id: 'servicios', label: 'Servicios' },
-    { id: 'proyectos', label: 'Proyectos' },
-    { id: 'aliados', label: 'Aliados' },
-    { id: 'contacto', label: 'Contacto' }
-  ], []);
+  if (loading) return null; // O un splash screen muy minimalista
 
-  // ScrollSpy Logic
-  useEffect(() => {
-    if (loading) return;
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -70% 0px',
-      threshold: 0
-    };
-
-    const handleIntersect = (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersect, observerOptions);
-    const sectionsToObserve = ['hero', ...navSections.map(s => s.id), 'donaciones'];
-    
-    sectionsToObserve.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, [loading, navSections]);
+  const n = data?.narrativa;
 
   return (
-    <div className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
-      <Navbar sections={navSections} activeSection={activeSection} />
+    <div className="min-h-screen bg-brand-paper font-sans selection:bg-brand-accent selection:text-brand-paper overflow-x-hidden">
+      <Navbar 
+        sections={NAV_SECTIONS} 
+        activeSection={activeSection} 
+        siteInfo={data?.siteInfo}
+      />
       
       <main>
-        <Hero data={data?.hero} />
-        <SectionNosotros data={data?.nosotros} />
-        <Services data={data?.servicios} />
-        <Projects data={data?.proyectos} />
+        {/* 🎥 Hero — Declaración */}
+        <Declaracion data={n?.declaracion} />
+
+        {/* 🧍 Bloque Humano */}
+        <BloqueHumano data={n?.bloqueHumano} />
+
+        {/* 🎭 Ecosistema Vivo (Proyectos) */}
+        <Ecosistema data={n?.ecosistema} />
+
+        {/* 🔧 Lo que hacemos (Hacer de la Cultura) */}
+        <HacerDeLaCultura data={n?.hacer} />
+
+        {/* 🧠 Filosofía / Proceso */}
+        <Filosofia data={n?.filosofia} />
+
+        {/* 🤝 Aliados (Minimal) */}
         <Allies data={data?.aliados} />
-        <Donations />
+
+        {/* 💸 Donaciones (Acción Emocional) */}
+        <DonacionesNarrativa data={n?.donaciones} />
+
+        {/* 📍 Contacto */}
         <ContactForm />
       </main>
 
-      <Footer sections={navSections} />
+      <Footer 
+        sections={NAV_SECTIONS} 
+        siteInfo={data?.siteInfo}
+      />
     </div>
   );
 }
