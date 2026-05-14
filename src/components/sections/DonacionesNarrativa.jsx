@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Heart, ArrowRight } from 'lucide-react';
 
-const DonacionesNarrativa = ({ data }) => {
+const DonacionesNarrativa = ({ data, onDonate }) => {
   const [selectedLevel, setSelectedLevel] = useState(null);
 
   return (
@@ -44,6 +44,7 @@ const DonacionesNarrativa = ({ data }) => {
               key={nivel.id}
               onMouseEnter={() => setSelectedLevel(idx)}
               onMouseLeave={() => setSelectedLevel(null)}
+              onClick={() => onDonate(nivel)}
               className={`group p-8 md:p-12 border-r border-white/10 last:border-r-0 transition-all duration-500 cursor-pointer ${
                 selectedLevel === idx ? 'bg-brand-paper text-brand-midnight' : 'bg-transparent'
               }`}
@@ -76,7 +77,10 @@ const DonacionesNarrativa = ({ data }) => {
             <span className="text-[10px] uppercase tracking-[0.3em] font-mono text-brand-paper/40">
                Toda donación es auditada y reportada en nuestra bitácora anual.
             </span>
-            <button className="px-12 py-4 bg-brand-accent text-brand-paper hover:bg-brand-paper hover:text-brand-midnight transition-all font-bold uppercase text-xs tracking-widest">
+            <button 
+              onClick={() => onDonate()}
+              className="px-12 py-4 bg-brand-accent text-brand-paper hover:bg-brand-paper hover:text-brand-midnight transition-all font-bold uppercase text-xs tracking-widest"
+            >
                Sembrar ahora
             </button>
          </div>

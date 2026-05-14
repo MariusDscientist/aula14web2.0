@@ -38,14 +38,22 @@
         "nombre": "Puro Cuento",
         "tagline": "Narrar es resistir",
         "descripcion": "Colectivo de narración oral que habita la palabra y la memoria.",
-        "imagen": "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/torneo_fcdfko.jpg"
+        "imagen": "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/torneo_fcdfko.jpg",
+        "social": {
+          "instagram": "https://instagram.com/purocuento",
+          "youtube": "https://youtube.com/c/purocuento"
+        }
       },
       {
         "id": "la-papayerosky",
         "nombre": "La Papayerosky",
         "tagline": "Sonido que transforma",
         "descripcion": "Grupo de música multifolclórica que rescata y evoluciona el ritmo territorial.",
-        "imagen": "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/Papayera_xhxmjb.jpg"
+        "imagen": "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/Papayera_xhxmjb.jpg",
+        "social": {
+          "instagram": "https://instagram.com/lapapayerosky",
+          "youtube": "https://youtube.com/c/lapapayerosky"
+        }
       }
     ],
     "hacer": [
@@ -54,7 +62,7 @@
         "area": "Aprender haciendo",
         "original": "Formación",
         "descripcionCorta": "Laboratorios de creación artística y mediación cultural.",
-        "descripcionLarga": "Diseñamos espacios de aprendizaje donde la teoría se funde con la práctica.",
+        "descripcionLarga": "Diseñamos espacios de aprendizaje donde la teoría se funde con la práctica a través de la experimentación directa.",
         "galeria": ["https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/Papayera_xhxmjb.jpg", 
                     "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166889/purocuento_kv7qk4.jpg"],
         "links": { "contacto": "https://wa.me/573206039545", "comunidad": "https://chat.whatsapp.com/invitacion" }
@@ -64,9 +72,36 @@
         "area": "Construir sonido",
         "original": "Luthería",
         "descripcionCorta": "El arte de fabricar y restaurar la voz de los instrumentos.",
-        "descripcionLarga": "Rescatamos técnicas ancestrales para la construcción y reparación de instrumentos de cuerda.",
+        "descripcionLarga": "Rescatamos técnicas ancestrales para la construcción y reparación de instrumentos de cuerda, preservando el saber artesanal.",
         "galeria": ["https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/torneo_fcdfko.jpg", 
                     "https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/Papayera_xhxmjb.jpg"],
+        "links": { "contacto": "https://wa.me/573206039545", "comunidad": null }
+      },
+      {
+        "id": "escenicas",
+        "area": "Habitar el cuerpo",
+        "original": "Artes Escénicas",
+        "descripcionCorta": "Teatro y expresión corporal para la transformación social.",
+        "descripcionLarga": "Exploramos el movimiento y la palabra como herramientas de empoderamiento y diálogo con el territorio.",
+        "galeria": ["https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/puro_vf0aih.jpg"],
+        "links": { "contacto": "https://wa.me/573206039545", "comunidad": null }
+      },
+      {
+        "id": "gestion",
+        "area": "Tejer redes",
+        "original": "Gestión Cultural",
+        "descripcionCorta": "Asesoría y diseño de proyectos culturales sostenibles.",
+        "descripcionLarga": "Acompañamos a creadores y comunidades en la estructuración de iniciativas que fortalezcan el ecosistema creativo local.",
+        "galeria": ["https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166894/hero_ieuvx9.jpg"],
+        "links": { "contacto": "https://wa.me/573206039545", "comunidad": "https://chat.whatsapp.com/invitacion" }
+      },
+      {
+        "id": "audiovisual",
+        "area": "Mirar el origen",
+        "original": "Audiovisuales",
+        "descripcionCorta": "Documentación y creación de narrativas transmedia.",
+        "descripcionLarga": "Capturamos la esencia de los procesos comunitarios a través del lente, creando memoria visual para las futuras generaciones.",
+        "galeria": ["https://res.cloudinary.com/du94iybqm/image/upload/q_auto/f_auto/v1775166888/payeraFIesta_lzu0yq.jpg"],
         "links": { "contacto": "https://wa.me/573206039545", "comunidad": null }
       }
     ],
@@ -98,7 +133,22 @@
           "impacto": "Sostiene un proceso de investigación de memoria histórica.",
           "monto": "$500.000"
         }
-      ]
+      ],
+      "metodos": {
+        "bancario": {
+          "banco": "Bancolombia",
+          "tipo": "Cuenta de Ahorros",
+          "numero": "123-456789-01",
+          "titular": "Fundación Aula 14",
+          "nit": "901.234.567-8"
+        },
+        "digital": {
+          "nequi": "320 603 9545",
+          "daviplata": "320 603 9545",
+          "qrCode": "https://res.cloudinary.com/du94iybqm/image/upload/v1740695022/qr-placeholder_y8u5p2.png"
+        },
+        "whatsapp": "573206039545"
+      }
     }
   },
   "aliados": [

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContent } from './hooks/useContent';
 import { useScrollSpy } from './hooks/useScrollSpy';
 import { NAV_SECTIONS, SCROLL_OBSERVE_SECTIONS } from './constants/navigation';
@@ -17,13 +17,23 @@ import DonacionesNarrativa from './components/sections/DonacionesNarrativa';
 import ContactForm from './components/sections/ContactForm';
 import Allies from './components/sections/Allies';
 
+// Common Components
+import DonationModal from './components/common/DonationModal';
+
 export default function App() {
   const { data, loading } = useContent();
   const activeSection = useScrollSpy(SCROLL_OBSERVE_SECTIONS);
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+  const [selectedDonationLevel, setSelectedDonationLevel] = useState(null);
 
   if (loading) return null; // O un splash screen muy minimalista
 
   const n = data?.narrativa;
+
+  const handleOpenDonationModal = (level = null) => {
+    setSelectedDonationLevel(level);
+    setIsDonationModalOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-brand-paper font-sans selection:bg-brand-accent selection:text-brand-paper overflow-x-hidden">
@@ -31,6 +41,7 @@ export default function App() {
         sections={NAV_SECTIONS} 
         activeSection={activeSection} 
         siteInfo={data?.siteInfo}
+        onDonate={() => handleOpenDonationModal()}
       />
       
       <main>
@@ -53,7 +64,10 @@ export default function App() {
         <Allies data={data?.aliados} />
 
         {/* 💸 Donaciones (Acción Emocional) */}
-        <DonacionesNarrativa data={n?.donaciones} />
+        <DonacionesNarrativa 
+          data={n?.donaciones} 
+          onDonate={handleOpenDonationModal}
+        />
 
         {/* 📍 Contacto */}
         <ContactForm />
@@ -62,6 +76,14 @@ export default function App() {
       <Footer 
         sections={NAV_SECTIONS} 
         siteInfo={data?.siteInfo}
+      />
+
+      {/* 💸 Modal de Donaciones */}
+      <DonationModal 
+        isOpen={isDonationModalOpen}
+        onClose={() => setIsDonationModalOpen(false)}
+        data={n?.donaciones}
+        selectedLevel={selectedDonationLevel}
       />
     </div>
   );

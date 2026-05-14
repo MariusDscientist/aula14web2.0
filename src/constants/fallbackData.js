@@ -41,6 +41,23 @@ export const FALLBACK_DATA = {
       image: "https://images.unsplash.com/photo-1550985616-10810253b84d?auto=format&fit=crop&q=80"
     }
   ],
+  donaciones: {
+    metodos: {
+      bancario: {
+        banco: "Bancolombia",
+        tipo: "Cuenta de Ahorros",
+        numero: "123-456789-01",
+        titular: "Fundación Aula 14",
+        nit: "901.234.567-8"
+      },
+      digital: {
+        nequi: "320 603 9545",
+        daviplata: "320 603 9545",
+        qrCode: "https://res.cloudinary.com/du94iybqm/image/upload/v1740695022/qr-placeholder_y8u5p2.png"
+      },
+      whatsapp: "573206039545"
+    }
+  },
   aliados: [
     { name: "La Papayerosky" }, { name: "Colectivo Puro Cuento" }, { name: "Comfamiliar" }, { name: "SENA" }
   ]

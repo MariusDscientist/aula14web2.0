@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Heart } from 'lucide-react';
 
-const Navbar = ({ sections, activeSection, siteInfo }) => {
+const Navbar = ({ sections, activeSection, siteInfo, onDonate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -24,6 +24,11 @@ const Navbar = ({ sections, activeSection, siteInfo }) => {
       });
       setIsMenuOpen(false);
     }
+  };
+
+  const handleDonateClick = () => {
+    onDonate();
+    setIsMenuOpen(false);
   };
 
   return (
@@ -60,7 +65,7 @@ const Navbar = ({ sections, activeSection, siteInfo }) => {
                 </button>
               ))}
               <button 
-                onClick={() => scrollTo('donaciones')}
+                onClick={handleDonateClick}
                 className="text-[13px] uppercase tracking-[0.3em] font-bold bg-brand-accent text-brand-paper px-6 py-3 hover:bg-brand-midnight transition-all"
               >Donar
               </button>
@@ -95,7 +100,7 @@ const Navbar = ({ sections, activeSection, siteInfo }) => {
               </button>
             ))}
             <button 
-                onClick={() => scrollTo('donaciones')}
+                onClick={handleDonateClick}
                 className="mt-8 text-2xl font-serif font-black bg-brand-accent text-brand-paper px-12 py-6"
             >
                 Donar
